@@ -25,13 +25,24 @@ function tableau($table)
     return $donne;
 }
 
-function list_ump(){
+function list_ump() {
     $dbb = dbconnect();
-    $sql = "select * from v_s2_emprunts";
-    $resultat = mysqli_query($dbb, $sql);
 
-    return tableau($resultat);
+    $sql = "SELECT * FROM s2_emprunt"; // ← Vérifie que cette table existe
+    $result = mysqli_query($dbb, $sql);
+
+    if (!$result) {
+        die("Erreur SQL : " . mysqli_error($dbb));
+    }
+
+    $data = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $data[] = $row;
+    }
+
+    return $data;
 }
+
 
 function reformater_date($date)
 {
@@ -40,4 +51,10 @@ function reformater_date($date)
     $mois = $date[1];
     $jour = $date[2];
     return "$jour/$mois/$annee";
+}
+function insertion($newName, $user, $bdd)
+{
+    $sql = "INSERT INTO videos (id_user, vid_nom) VALUES (%s, '%s');";
+    $sql = sprintf($sql, $user, $newName);
+    $resultat = mysqli_query($bdd, $sql);
 }
