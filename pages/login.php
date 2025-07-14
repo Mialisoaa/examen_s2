@@ -79,6 +79,7 @@
     }
     .erreur {
       color: red;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -87,6 +88,11 @@
   <div class="login-container">
 
     <div class="logo">emprunt</div>
+
+    <?php if (isset($_GET['erreur']) && $_GET['erreur'] == 'true') { ?>
+      <div class="erreur"><p>Identification echouée, veuillez réessayer.</p></div>
+    <?php }?> 
+
     <form action="traitement/trait_login.php" method="POST">
       <input type="text" name="email" placeholder="Email de l'utilisateur"/>
       <input type="text" name="name" placeholder="Nom de l'utilisateur"/>
