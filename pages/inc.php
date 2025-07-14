@@ -32,7 +32,7 @@
       <button type="submit">Connexion</button>
     </form>
 
-    <p class="signup"><a href="">Inscription</a></p>
+    <p class="signup"></p><a href="login.php">Déjà inscrit ? Se connecter</a></p>
   </div>
 
 </body>

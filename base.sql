@@ -25,10 +25,11 @@ CREATE Table s2_objet(
 );
 
 CREATE Table s2_img_obj(
-    id_img INT PRIMARY KEY,
+    id_img INT auto_increment,
     id_obj INT,
     nom_img VARCHAR(20),
-    Foreign Key (id_obj) REFERENCES s2_objet (id_obj)
+    Foreign Key (id_obj) REFERENCES s2_objet (id_obj),
+    Foreign key (id_img);
 );
 
 CREATE TABLE s2_emprunt(
@@ -120,3 +121,46 @@ INSERT INTO s2_emprunt (id_obj, id_mbr, date_ump, date_ret) VALUES
 INSERT into s2_emprunt (id_obj, id_mbr, date_ump, date_ret) VALUES
 (6, 1, '2023-10-11', null),
 (8, 2, '2023-10-12', null);
+
+--img objet
+INSERT into s2_img_obj (id_img, id_obj, nom_img) VALUES
+(1, 1, '1.jpg'),
+(2, 2, '2.jpg'),
+(3, 3, '3.jpg'),
+(4, 4, '4.jpg'),
+(5, 5, '5.jpg'),
+(6, 6, '6.jpg'),
+(7, 7, '7.jpg'),
+(8, 8, '8.jpg'),
+(9, 9, '9.jpg'),
+(10, 10, '10.jpg'),
+(11, 11, '11.jpg'),
+(12, 12, '12.jpg'),
+(13, 13, '13.jpg'),
+(14, 14, '14.jpg'),
+(15, 15, '15.jpg'),
+(16, 16, '16.jpg'),
+(17, 17, '17.jpg'),
+(18, 18, '18.jpg'),
+(19, 19, '19.jpg'),
+(20, 20, '20.jpg'),
+(21, 21, '21.jpg'),
+(22, 22, '22.jpg'),
+(23, 23, '23.jpg'),
+(24, 24, '24.jpg'),
+(25, 25, '25.jpg'),
+(26, 26, '26.jpg'),
+(27, 27, '27.jpg'),
+(28, 28, '28.jpg'),
+(29, 29, '29.jpg'),
+(30, 30, '30.jpg'),
+(31, 31, '31.jpg'),
+(32, 32, '32.jpg'),
+(33, 33, '33.jpg'),
+(34, 34, '34.jpg'),
+(35, 35, '35.jpg'),
+(36, 36, '36.jpg'),
+(37, 37, '37.jpg'),
+(38, 38, '38.jpg'),
+(39, 39, '39.jpg'),
+(40, 40, '40.jpg');
