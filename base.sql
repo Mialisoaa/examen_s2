@@ -29,7 +29,7 @@ CREATE Table s2_img_obj(
     id_obj INT,
     nom_img VARCHAR(20),
     Foreign Key (id_obj) REFERENCES s2_objet (id_obj),
-    Foreign key (id_img);
+    PRIMARY KEY(id_img)
 );
 
 CREATE TABLE s2_emprunt(

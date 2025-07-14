@@ -1,6 +1,6 @@
 <?php
 include("../INC/fonction.php");
-$emp = list_ump(); // ← On appelle bien la fonction et stocke dans $emp
+$emp = list_obj(); 
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -12,6 +12,7 @@ $emp = list_ump(); // ← On appelle bien la fonction et stocke dans $emp
 
     <header>
         <h1>Bienvenue sur la page d'accueil</h1>
+        <a href="upload.php">ajouter une nouvelle objet</a>
     </header>
 
     <div class="container-fluid">
@@ -24,12 +25,12 @@ $emp = list_ump(); // ← On appelle bien la fonction et stocke dans $emp
                     <th>Date de retour</th>
                 </tr>
 
-                <?php foreach ($emp as $aff_emp) { ?>
+                <?php foreach ($emp as $aff_emp) {  //echo $aff_emp["image_objet"]; ?>
                     <tr>
-                        <td><img src="../images/<?= htmlspecialchars($aff_emp["image"]) ?>" width="80"></td>
-                        <td><?= htmlspecialchars($aff_emp["nom_objet"]) ?></td>
-                        <td><?= htmlspecialchars($aff_emp["date_emprunt"]) ?></td>
-                        <td><?= htmlspecialchars($aff_emp["date_retour"]) ?></td>
+                        <td><img src="../assets/img/<?= htmlspecialchars($aff_emp["image_objet"]) ?>" width="80"></td>
+                        <td><?= htmlspecialchars($aff_emp["nom_obj"]) ?></td>
+                        <td><?= htmlspecialchars(reformater_date($aff_emp["date_emprunt"])) ?></td>
+                        <td><?= htmlspecialchars(reformater_date($aff_emp["date_retour"])) ?></td>
                     </tr>
                 <?php } ?> 
 

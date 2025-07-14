@@ -3,11 +3,11 @@ session_start();
 include("../inc/function.php");
 include("../inc/connection.php");
 
-$uploadDir ='../assets/videos/';
+$uploadDir ='../assets/img/';
 
 $maxSize = 25 * 1024 * 1024; // 2 Mo
 
-$allowedMimeTypes = ['video/mp4'];
+$allowedMimeTypes = ['video/mp4, image/jpg, image/jpeg, image/png'];
 
 // Vérifie si un fichier est soumis
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['fichier'])) {
@@ -41,11 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['fichier'])) {
     echo "<br>";
 
     // Déplace le fichier
-    
     if (move_uploaded_file($file['tmp_name'],$uploadDir . $newName)) {
         echo "Fichier uploadé avec succès : ". $newName;
         insertion($newName, $_SESSION["user"], $dbb);
-        header("Location:../pages/upload.php");
+        //header("Location:../pages/upload.php");
     } else {
         echo "Échec du déplacement du fichier.";
     }

@@ -7,7 +7,7 @@ JOIN s2_membre ON s2_emprunt.id_mbr = s2_membre.id_mbr;
 CREATE OR REPLACE v_s2_list_obj AS
 SELECT
 
-CREATE VIEW vue_liste_objets_emprunts AS
+CREATE VIEW v_list_obt AS
 SELECT 
     o.id_obj,
     o.nom_obj,

@@ -13,7 +13,7 @@
 
     <div class="logo">Inscription</div>
 
-    <form action="traitement/trait_login.php" method="POST">
+    <form action="traitement/trait_inc.php" method="POST">
       <h3>Email</h3>
       <input type="text" name="email" placeholder="Email de l'utilisateur"/>
       <h3>Nom</h3>
@@ -29,7 +29,7 @@
       <input type="text" name ="ville" placeholder="ex:Antananarivo" />
       <h3>mot de passe </h3>
       <input type="password" name="psd" placeholder="mot de passe">
-      <button type="submit">Connexion</button>
+      <button type="submit">s'inscrire</button>
     </form>
 
     <p class="signup"></p><a href="login.php">Déjà inscrit ? Se connecter</a></p>
