@@ -1,0 +1,116 @@
+/* style.css — Design moderne et élégant */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #10359c, #8abbff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.8s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s ease;
+  }
+  
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid #fff;
+    outline: none;
+  }
+  
+  button {
+    padding: 14px;
+    background-color: #ffffff;
+    color: #034779;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .signup {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  .signup a {
+    color: #685e05;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .signup a:hover {
+    text-decoration: underline;
+  }
+  
+  .erreur {
+    background-color: rgba(95, 1, 1, 0.2);
+    color: #fff;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ff4d4d;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
