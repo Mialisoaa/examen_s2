@@ -58,7 +58,7 @@ INSERT INTO s2_categorie_obj (id_c, nom_c) VALUES
 (4, 'cuisine');
 
 INSERT INTO s2_objet (id_obj, nom_obj, id_mbr, id_c) VALUES
--- Catégorie 1 : Esthétique (10 objets)
+
 (1, 'Brosse à cheveux', 1, 1),
 (2, 'Mascara', 1, 1),
 (3, 'Gel coiffant', 2, 1),
@@ -70,7 +70,6 @@ INSERT INTO s2_objet (id_obj, nom_obj, id_mbr, id_c) VALUES
 (9, 'Vernis à ongles', 1, 1),
 (10, 'Crème hydratante', 2, 1),
 
--- Catégorie 2 : Bricolage (10 objets)
 (11, 'Perceuse électrique', 1, 2),
 (12, 'Marteau', 1, 2),
 (13, 'Scie manuelle', 2, 2),
@@ -82,19 +81,17 @@ INSERT INTO s2_objet (id_obj, nom_obj, id_mbr, id_c) VALUES
 (19, 'Tournevis', 1, 2),
 (20, 'Lime à ongles', 2, 2),
 
--- Catégorie 3 : Mécanique (10 objets)
 (21, 'Clé plate', 1, 3),
 (22, 'Cric', 1, 3),
 (23, 'Clé dynamométrique', 2, 3),
 (24, 'Pompe à vélo', 2, 3),
 (25, 'Boîte à outils', 3, 3),
-(26, 'Bidon d’huile moteur', 3, 3),
+(26, 'Bidon d huile moteur', 3, 3),
 (27, 'Cric hydraulique', 4, 3),
 (28, 'Batterie de voiture', 4, 3),
 (29, 'Pince universelle', 3, 3),
 (30, 'Tournevis cruciforme', 2, 3),
 
--- Catégorie 4 : Cuisine (10 objets)
 (31, 'Poêle antiadhésive', 1, 4),
 (32, 'Mixeur', 1, 4),
 (33, 'Couteau de chef', 2, 4),
@@ -105,3 +102,21 @@ INSERT INTO s2_objet (id_obj, nom_obj, id_mbr, id_c) VALUES
 (38, 'Casserole', 4, 4),
 (39, 'Spatule', 4, 4),
 (40, 'Thermomètre de cuisine', 4, 4);
+
+--emprunts
+INSERT INTO s2_emprunt (id_obj, id_mbr, date_ump, date_ret) VALUES
+(10, 1, '2023-10-01', '2024-10-15'),
+(2, 2, '2023-10-02', '2024-10-16'),
+(7, 3, '2023-10-03', '2024-10-17'),
+(22, 4, '2023-10-04', '2024-10-18'),
+(39, 1, '2023-10-05', '2024-10-19'),
+(36, 2, '2023-10-06', '2024-10-20'),
+(21, 3, '2023-10-07', '2024-10-21'),
+(3, 4, '2023-10-08', '2024-10-22'),
+(35, 1, '2023-10-09', '2024-10-23'),
+(40, 2, '2023-10-10', '2024-10-24');
+
+--test emprunt
+INSERT into s2_emprunt (id_obj, id_mbr, date_ump, date_ret) VALUES
+(6, 1, '2023-10-11', null),
+(8, 2, '2023-10-12', null);
