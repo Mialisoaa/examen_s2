@@ -26,3 +26,12 @@ examen V1
     -liste d'objets avec date de retour si emprunt en cours
     -filtre par categorie
 amelioration de desing (ok)
+
+alea :liste ojet asina bouton umprinter de manampy camp oe firy jours 
+de eo amle liste zany misy oe zao izy no nindramina oh oe 3andro de misy zany eo oe disponible le ...
+une emprunter.php pour acceder au bouton emprunter que j'ai mis sur accueil je veux que cette page  emprunter.php aide a selectionner un objet a emprunter 
+et de donner le delet de l'umprunt , alors je veux que les gents peux selectionner le dele de l'emprunt et apres le dele va afficher sur le tableau
+vous avez sencer de faire une fonction alors fai une fonction dans la fonction.php
+alors ce que vous devez faire c'est de ajouter la collene emprunt dans accueil.php , de cree une page emprunter , de cree une page traitement_umpr et de 
+faire la foction compatible dans fonction.php
+<button type="submit">Emprunter</button> comment je peux ajouter ce bouton vers emprunter.php

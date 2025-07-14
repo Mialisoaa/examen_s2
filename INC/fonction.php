@@ -68,3 +68,17 @@ function list_obj(){
     $sql = "select * from v_list_obt;";
     return tableau($sql);
 }
+function enregistrer_emprunt($id_user, $id_objet, $duree) {
+    $bdd = dbconnect();
+
+    $sql = "INSERT INTO s2_emprunt (id_user, id_objet, date_emprunt, date_retour)
+            VALUES (?, ?, CURDATE(), DATE_ADD(CURDATE(), INTERVAL ? DAY))";
+
+    $stmt = mysqli_prepare($bdd, $sql);
+    mysqli_stmt_bind_param($stmt, "iii", $id_user, $id_objet, $duree);
+    mysqli_stmt_execute($stmt);
+
+    if (!mysqli_stmt_affected_rows($stmt)) {
+        die("Erreur lors de l'enregistrement de l'emprunt : " . mysqli_error($bdd));
+    }
+}

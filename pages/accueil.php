@@ -1,6 +1,17 @@
 <?php
 include("../INC/fonction.php");
 $emp = list_obj(); 
+
+// ✅ Afficher le message si succès ou échec
+if (isset($_GET["success"])) {
+    if ($_GET["success"] == "1") {
+        echo "<p style='color:green;'>Emprunt enregistré avec succès !</p>";
+    } else {
+        echo "<p style='color:red;'> Échec de l'emprunt.</p>";
+    }
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,12 +24,18 @@ $emp = list_obj();
     <header>
         <h1>Bienvenue sur la page d'accueil</h1>
         <a href="upload.php">ajouter une nouvelle objet</a>
+        <a href="emprunter.php">
+    <button type="button">Emprunter</button>
+    </a>
+
     </header>
 
     <div class="container-fluid">
         <section>
             <table border="1">
                 <tr>
+                
+                    <th>Disponibilité</th>
                     <th>Image de l'objet</th>
                     <th>Nom de l'objet</th>
                     <th>Dernière date d'emprunt</th>
@@ -26,6 +43,10 @@ $emp = list_obj();
                 </tr>
 
                 <?php foreach ($emp as $aff_emp) {  //echo $aff_emp["image_objet"]; ?>
+                    <td>
+    <?= empty($aff_emp["date_retour"]) || strtotime($aff_emp["date_retour"]) < time() ? "Disponible" : "Indisponible" ?>
+</td>
+
                     <tr>
                         <td><img src="../assets/img/<?= htmlspecialchars($aff_emp["image_objet"]) ?>" width="80"></td>
                         <td><?= htmlspecialchars($aff_emp["nom_obj"]) ?></td>
