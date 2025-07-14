@@ -35,3 +35,7 @@ vous avez sencer de faire une fonction alors fai une fonction dans la fonction.p
 alors ce que vous devez faire c'est de ajouter la collene emprunt dans accueil.php , de cree une page emprunter , de cree une page traitement_umpr et de 
 faire la foction compatible dans fonction.php
 <button type="submit">Emprunter</button> comment je peux ajouter ce bouton vers emprunter.php
+
+
+fiche membres afficher liste emprunt du membres avec bouton retour de l'objet et avec une liste selection si l'objet et abimé ou non
+une page avec les objets abimé et non abimé

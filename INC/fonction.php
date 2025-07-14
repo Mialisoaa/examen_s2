@@ -27,11 +27,12 @@ function tableau($sql)
     return $tableau;
 }
 
-function list_ump() {
+function list_ump($id) {
     //$dbb = dbconnect();
-    $sql = "SELECT * FROM s2_emprunt"; 
+    $sql = "SELECT * FROM v_s2_emprunts where id_mbr=1"; 
+    $sql = sprintf($sql, $id);
     //$result = mysqli_query($dbb, $sql);
-    return $sql;
+    return tableau($sql);
 }
 
 
@@ -81,4 +82,8 @@ function enregistrer_emprunt($id_user, $id_objet, $duree) {
     if (!mysqli_stmt_affected_rows($stmt)) {
         die("Erreur lors de l'enregistrement de l'emprunt : " . mysqli_error($bdd));
     }
+}
+
+function retour($etat){
+    //$sqpl="insert into etat_obj";
 }

@@ -43,6 +43,12 @@ CREATE TABLE s2_emprunt(
      PRIMARY KEY(id_ump)
 );
 
+CREATE Table etat_obj(
+    id_obj INT,
+    etat VARCHAR(10),
+    Foreign Key (id_obj) REFERENCES s2_objet (id_obj)
+);
+
 --donnee
 --menbres
 INSERT INTO s2_membre (nom, dtn, genre, email, ville, mdp, pdp) VALUES 
@@ -122,6 +128,9 @@ INSERT into s2_emprunt (id_obj, id_mbr, date_ump, date_ret) VALUES
 (6, 1, '2023-10-11', null),
 (8, 2, '2023-10-12', null);
 
+INSERT INTO s2_emprunt (id_obj, id_mbr, date_ump, date_ret) VALUES
+(9, 1, '2025-07-14', null);
+
 --img objet
 INSERT into s2_img_obj (id_img, id_obj, nom_img) VALUES
 (1, 1, '1.jpg'),
@@ -164,3 +173,4 @@ INSERT into s2_img_obj (id_img, id_obj, nom_img) VALUES
 (38, 38, '38.jpg'),
 (39, 39, '39.jpg'),
 (40, 40, '40.jpg');
+

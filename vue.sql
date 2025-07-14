@@ -1,5 +1,5 @@
 CREATE OR REPLACE VIEW v_s2_emprunts AS
-SELECT s2_objet.nom_obj, s2_membre.nom, s2_emprunt.date_ump, s2_emprunt.date_ret
+SELECT s2_objet.id_obj, s2_objet.nom_obj, s2_membre.id_mbr, s2_membre.nom, s2_emprunt.date_ump, s2_emprunt.date_ret
 FROM s2_emprunt
 JOIN s2_objet ON s2_emprunt.id_obj = s2_objet.id_obj
 JOIN s2_membre ON s2_emprunt.id_mbr = s2_membre.id_mbr;
