@@ -77,6 +77,9 @@
       color: #0095f6;
       text-decoration: none;
     }
+    .erreur {
+      color: red;
+    }
   </style>
 </head>
 <body>
@@ -84,7 +87,11 @@
   <div class="login-container">
 
     <div class="logo">emprunt</div>
-
+    <?php 
+    if (issets($_GET ["erreur"]) && $_GET ["erreur"] == "true") {
+      
+    }
+    ?>
     <form action="traitement/trait_login.php" method="POST">
       <input type="text" name="email" placeholder="Email de l'utilisateur"/>
       <input type="text" name="name" placeholder="Nom de l'utilisateur"/>
@@ -92,7 +99,7 @@
       <button type="submit">Connexion</button>
     </form>
 
-    <p class="signup"><a href="">Inscription</a></p>
+    <p class="signup"><a href="inc.php">Inscription</a></p>
   </div>
 
 </body>

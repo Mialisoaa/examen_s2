@@ -17,7 +17,7 @@ CREATE TABLE s2_categorie_obj(
 
 CREATE Table s2_objet(
     id_obj INT PRIMARY KEY,
-    nom_obj VARCHAR(20),
+    nom_obj VARCHAR(50),
     id_c INT,
     id_mbr INT,
     Foreign Key (id_c) REFERENCES s2_categorie_obj (id_c),
