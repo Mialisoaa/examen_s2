@@ -87,11 +87,6 @@
   <div class="login-container">
 
     <div class="logo">emprunt</div>
-    <?php 
-    if (issets($_GET ["erreur"]) && $_GET ["erreur"] == "true") {
-      
-    }
-    ?>
     <form action="traitement/trait_login.php" method="POST">
       <input type="text" name="email" placeholder="Email de l'utilisateur"/>
       <input type="text" name="name" placeholder="Nom de l'utilisateur"/>
