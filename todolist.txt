@@ -1,0 +1,27 @@
+examen V1
+1-creation de la base de donnée(en cours)
+    -membre(id_mbr, nom, dtn, genre, email, ville, mdp, pdp)
+    -categorie_obj(id_c, nom_c)
+    -objet(id_obj, nom_obj, id_c, id_mbr)
+    -img_obj(id_img, id_obj, nom_img)
+    -emprunt(id_ump, id_obj, id_mbr, date_ump, date_ret)
+
+2-donné test
+    -membres(Tojo, Sai, Tony, Aiko)
+    -categories(esthetiques, bricolage, mecanique,cuisine)
+    -40 objets (10 obj/membres) a repartir sur les 4 categories
+
+3-creation de page 
+    -login et inscription
+        -page login
+            -input(text pour email et nom, password, submit)
+            -traitement de verification
+        
+        -page inscription 
+            -input(nom, date de naissance, genre, email, ville, mdp, image_profil)
+            -page upload a creer
+            -traitement de d'inscription
+            -function insc() pour ajouter
+
+    -liste d'objets avec date de retour si emprunt en cours
+    -filtre par categorie
