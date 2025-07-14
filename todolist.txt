@@ -25,3 +25,4 @@ examen V1
 
     -liste d'objets avec date de retour si emprunt en cours
     -filtre par categorie
+amelioration de desing (ok)
