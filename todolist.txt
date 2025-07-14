@@ -11,11 +11,11 @@ examen V1
     -categories(esthetiques, bricolage, mecanique,cuisine)(ok)
     -40 objets (10 obj/membres) a repartir sur les 4 categories(ok)
 
-3-creation de page 
-    -login et inscription
-        -page login
+3-creation de page(rn cours)
+    -login et inscription(en cours)
+        -page login(en cours)
             -input(text pour email et nom, password, submit)
-            -traitement de verification
+            -traitement de verification(en attente d'ordre)
         
         -page inscription 
             -input(nom, date de naissance, genre, email, ville, mdp, image_profil)
